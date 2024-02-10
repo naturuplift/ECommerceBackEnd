@@ -1,12 +1,15 @@
+// import model and datatypes from sequelize package
 const { Model, DataTypes } = require('sequelize');
-
+// import sequelize connection
 const sequelize = require('../config/connection.js');
 
+// Define Category class
 class Category extends Model {}
 
+// Initialize Category model with its schema definition
 Category.init(
   {
-    // define columns
+    // Define schema columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -18,7 +21,7 @@ Category.init(
       allowNull: false,
     },
   },
-  {
+  { // Associate this model with the sequelize instance
     sequelize,
     timestamps: false,
     freezeTableName: true,

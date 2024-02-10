@@ -1,7 +1,6 @@
 // Include packages needed for this application
 //  to load environment variables from a .env file
 require('dotenv').config();
-
 const Sequelize = require('sequelize');
 
 // connection setup supports both local and JawsDB
