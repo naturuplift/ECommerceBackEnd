@@ -1,0 +1,28 @@
+{
+  "name": "e-commerce-back-end",
+  "version": "1.0.0",
+  "description": "An e-commerce back-end system is a crucial component of online retail platforms, enabling seamless management and operation of digital storefronts. It provides the technological infrastructure necessary for managing an online store's products, categories, and tags, offering functionalities such as adding, updating, and deleting product information.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naturuplift/ECommerceBackEnd"
+  },
+  "keywords": [],
+  "author": "Arnaldo Sepulveda",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.7"
+  }
+}

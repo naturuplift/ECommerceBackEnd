@@ -1,5 +1,7 @@
+// Import the ProductTag model from the sequelize models
 const { ProductTag } = require('../models');
 
+// Array containing seed data for ProductTag
 const productTagData = [
   {
     product_id: 1,
@@ -51,6 +53,8 @@ const productTagData = [
   },
 ];
 
+// Function to seed ProductTag data into the database
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 
+// Export the seed function for use in the seeding script
 module.exports = seedProductTags;

@@ -1,5 +1,7 @@
+// Import the Product model from the sequelize models
 const { Product } = require('../models');
 
+// Array containing seed data for Product
 const productData = [
   {
     product_name: 'Plain T-Shirt',
@@ -33,6 +35,8 @@ const productData = [
   },
 ];
 
+// Function to seed Product data into the database
 const seedProducts = () => Product.bulkCreate(productData);
 
+// Export the seed function for use in the seeding script
 module.exports = seedProducts;

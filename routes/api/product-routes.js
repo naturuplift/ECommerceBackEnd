@@ -1,6 +1,6 @@
-// Import Router from express and models from the database
+// Import Router from express and models from database
 const router = require('express').Router();
-// Import Product, Category, Tag and ProductTag models from the models directory
+// Import Product, Category, Tag and ProductTag models from models directory
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // Routes for `/api/products` endpoint
@@ -41,7 +41,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', (req, res) => {
   Product.create(req.body)
     .then((product) => {
-      // if there's product tags, we need to create pairings to bulk create in the ProductTag model
+      // if there's product tags, we need to create pairings to bulk create in ProductTag model
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
@@ -122,5 +122,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// Export the router to make it available
+// Export router to make it available
 module.exports = router;

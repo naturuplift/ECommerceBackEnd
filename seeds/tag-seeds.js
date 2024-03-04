@@ -1,5 +1,7 @@
+// Import the Tag model from the sequelize models
 const { Tag } = require('../models');
 
+// Array containing seed data for Tag
 const tagData = [
   {
     tag_name: 'rock music',
@@ -27,6 +29,8 @@ const tagData = [
   },
 ];
 
+// Function to seed Tag data into the database
 const seedTags = () => Tag.bulkCreate(tagData);
 
+// Export the seed function for use in the seeding script
 module.exports = seedTags;

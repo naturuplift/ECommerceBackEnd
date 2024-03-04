@@ -13,5 +13,5 @@ router.use('/products', productRoutes);
 // Register tag routes to be served under '/tags' path
 router.use('/tags', tagRoutes);
 
-// Export the configured router to be used by the main application
+// Export the configured router to be used by main application
 module.exports = router;

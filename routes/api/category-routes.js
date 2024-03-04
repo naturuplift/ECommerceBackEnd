@@ -1,6 +1,6 @@
 // Import Router from express to create route handlers
 const router = require('express').Router();
-// Import Category and Product models from the models directory
+// Import Category and Product models from models directory
 const { Category, Product } = require('../../models');
 
 // Routes for `/api/categories` endpoint
@@ -12,10 +12,10 @@ router.get('/', async (req, res) => {
     const categoryData = await Category.findAll({
       include: [{ model: Product }],
     });
-    // Send back the category data with status code 200 (OK)
+    // Send back category data with status code 200 (OK)
     res.status(200).json(categoryData);
   } catch (err) {
-    // If an error occurs, send back the error with status code 500 (Internal Server Error)
+    // If an error occurs, send back error with status code 500 (Internal Server Error)
     res.status(500).json(err);
   }
 });
@@ -32,10 +32,10 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({ message: 'No category found with this id!' });
       return;
     }
-    // Send back the category data with status code 200 (OK)
+    // Send back category data with status code 200 (OK)
     res.status(200).json(categoryData);
   } catch (err) {
-    // If an error occurs, send back the error with status code 500 (Internal Server Error)
+    // If an error occurs, send back error with status code 500 (Internal Server Error)
     res.status(500).json(err);
   }
 });
@@ -43,12 +43,12 @@ router.get('/:id', async (req, res) => {
 // POST route to create a new category
 router.post('/', async (req, res) => {
   try {
-    // Create a new category with the data provided in the request body
+    // Create a new category with data provided in request body
     const categoryData = await Category.create(req.body);
-    // Send back the created category data with status code 200 (OK)
+    // Send back created category data with status code 200 (OK)
     res.status(200).json(categoryData);
   } catch (err) {
-    // If an error occurs, send back the error with status code 400 (Bad Request)
+    // If an error occurs, send back error with status code 400 (Bad Request)
     res.status(400).json(err);
   }
 });
@@ -56,7 +56,7 @@ router.post('/', async (req, res) => {
 // PUT route to update a category by its `id` value
 router.put('/:id', async (req, res) => {
   try {
-    // Update a category based on the request body and where the id matches the `id` parameter
+    // Update a category based on request body and where id matches `id` parameter
     const categoryData = await Category.update(req.body, {
       where: {
         id: req.params.id,
@@ -67,10 +67,10 @@ router.put('/:id', async (req, res) => {
       res.status(404).json({ message: 'No category found with this id!' });
       return;
     }
-    // Send back the status of the update with status code 200 (OK)
+    // Send back status of update with status code 200 (OK)
     res.status(200).json(categoryData);
   } catch (err) {
-    // If an error occurs, send back the error with status code 500 (Internal Server Error)
+    // If an error occurs, send back error with status code 500 (Internal Server Error)
     res.status(500).json(err);
   }
 });
@@ -78,7 +78,7 @@ router.put('/:id', async (req, res) => {
 // DELETE route to remove a category by its `id` value
 router.delete('/:id', async (req, res) => {
   try {
-    // Delete a category where the id matches the `id` parameter
+    // Delete a category where id matches `id` parameter
     const categoryData = await Category.destroy({
       where: {
         id: req.params.id,
@@ -89,13 +89,13 @@ router.delete('/:id', async (req, res) => {
       res.status(404).json({ message: 'No category found with this id!' });
       return;
     }
-    // Send back the status of the delete operation with status code 200 (OK)
+    // Send back status of delete operation with status code 200 (OK)
     res.status(200).json(categoryData);
   } catch (err) {
-    // If an error occurs, send back the error with status code 500 (Internal Server Error)
+    // If an error occurs, send back error with status code 500 (Internal Server Error)
     res.status(500).json(err);
   }
 });
 
-// Export the router to make these routes available
+// Export router to make these routes available
 module.exports = router;

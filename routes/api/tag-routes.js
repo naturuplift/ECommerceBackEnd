@@ -1,5 +1,6 @@
+// Import Router from express and models from database
 const router = require('express').Router();
-// Import Tag, Category and ProductTag models from the models directory
+// Import Tag, Category and ProductTag models from models directory
 const { Tag, Product, ProductTag } = require('../../models');
 
 // Routes for `/api/tags` endpoint
@@ -85,5 +86,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// Export the router to make it available
+// Export router to make it available
 module.exports = router;

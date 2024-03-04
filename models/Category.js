@@ -21,7 +21,7 @@ Category.init(
       allowNull: false,
     },
   },
-  { // Associate this model with the sequelize instance
+  { // Associate this model with sequelize instance
     sequelize,
     timestamps: false,
     freezeTableName: true,
