@@ -43,6 +43,7 @@ This project is an E-commerce back end that utilizes the latest technologies, pr
 - [Usage](#usage)
 - [Database Models](#database-models)
 - [Associations](#associations)
+- [Structure](#structure)
 - [Starter Code](#starter-code)
 - [State Flow Diagram](#state-flow-diagram)
 - [Contributing](#contributing)
@@ -145,6 +146,44 @@ Below are sample screenshots showcasing the application functionality.
 - Category has many Product models
 - Product belongs to many Tag models through ProductTag
 - Tag belongs to many Product models
+
+## Structure
+
+Your directory may have the following structure:
+
+```javascript
+ECommerceBackEnd/
+├── config/
+│   └── connection.js
+├── db/
+│   ├── schema.sql
+├── models/
+│   ├── Category.js
+│   ├── Product.js
+│   ├── Tag.js
+│   ├── ProductTag.js
+│   └── index.js
+├── routes/
+│   ├── api/
+│   │   ├── category-routes.js
+│   │   ├── product-routes.js
+│   │   ├── tag-routes.js
+│   │   └── index.js
+│   └── index.js
+├── seeds/
+│   ├── category-seeds.js
+│   ├── product-seeds.js
+│   ├── productTag-seeds.js
+│   └── tag-seeds.js
+│   └── seed.js
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── server.js
+└── README.md
+
+```
 
 ## Starter Code
 
