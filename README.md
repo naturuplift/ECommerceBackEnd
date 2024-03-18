@@ -174,7 +174,7 @@ ECommerceBackEnd/
 │   ├── category-seeds.js
 │   ├── product-seeds.js
 │   ├── productTag-seeds.js
-│   └── tag-seeds.js
+│   ├── tag-seeds.js
 │   └── seed.js
 ├── .env
 ├── .gitignore
