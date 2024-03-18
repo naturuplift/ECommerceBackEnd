@@ -68,7 +68,7 @@ router.put('/:id', async (req, res) => {
       return;
     }
     // Send back status of update with status code 200 (OK)
-    res.status(200).json(categoryData);
+    res.status(200).json({ message: 'Category updated successfully!' });
   } catch (err) {
     // If an error occurs, send back error with status code 500 (Internal Server Error)
     res.status(500).json(err);
@@ -90,7 +90,7 @@ router.delete('/:id', async (req, res) => {
       return;
     }
     // Send back status of delete operation with status code 200 (OK)
-    res.status(200).json(categoryData);
+    res.status(200).json({ message: 'Category deleted successfully!' });
   } catch (err) {
     // If an error occurs, send back error with status code 500 (Internal Server Error)
     res.status(500).json(err);
