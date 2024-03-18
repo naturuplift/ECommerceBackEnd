@@ -32,17 +32,135 @@
 <br/>
 
 
+## Description
+This project is an E-commerce back end that utilizes the latest technologies, providing an efficient and scalable solution for internet retail companies. Built with an Express.js API and connected to a MySQL database using Sequelize, this application facilitates product, category, and tag management through a RESTful API. This allows businesses to maintain their inventory in a database, offering endpoints for creating, reading, updating, and deleting (CRUD operations) data for categories, products, and tags.
+
+## Features
+
+- **View All Categories, Products, and Tags**: Users can retrieve a comprehensive list of all categories, products, and tags stored in the database, each accessible through dedicated API GET routes. This feature ensures that the backend supports scalable read operations for e-commerce inventories.
+
+- **Add New Categories, Products, and Tags**: The backend allows for the insertion of new categories, products, and tags into the database via API POST routes. This functionality is crucial for expanding the e-commerce catalog and supporting a growing business.
+
+- **Update Existing Categories, Products, and Tags**: With API PUT routes, users can modify the details of existing categories, products, and tags. This feature facilitates dynamic inventory management, allowing changes to product details, categorizations, and tagging as needed.
+
+- **Delete Categories, Products, and Tags**: The API DELETE routes enable users to remove categories, products, and tags from the database. This capability is essential for keeping the database clean and up-to-date, ensuring that discontinued products or obsolete categories and tags are properly managed.
+
+- **Structured Database Models with Associations**: Utilizes Sequelize to define structured database models for Categories, Products, Tags, and ProductTags, with appropriate associations among them. This structure supports complex queries and relationships, such as finding all products within a category or all tags associated with a product.
+
+- **Environment Variable Configuration**: Incorporates the `dotenv` package to securely configure environment variables. This approach safeguards database credentials and other sensitive information, making the application more secure and easier to configure across different environments.
+
+- **Sequelize Sync on Server Start**: Automatically syncs Sequelize models to the MySQL database upon server startup. This feature ensures that the database schema is up-to-date and ready for operations as soon as the server begins running.
+
+## Table of Contents
+
+- [Demo Video](#demo-video)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Database Models](#database-models)
+- [Associations](#associations)
+- [State Flow Diagram](#state-flow-diagram)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Demo Video
+[Open Demo video of Employee Tracker][employee-tracker]
+
+## Installation
+
+1. Ensure you have [Node.js][node-js] and [MySQL][my-sql] installed on your machine.
+2. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/naturuplift/ECommerceBackEnd.git
+```
+
+3. Navigate to the project directory and install dependencies:
+
+```bash
+cd ECommerceBackEnd
+npm install
+```
+
+4. Create a `.env` file in the root directory to store your MySQL username, password, and database name:
+
+```bash
+DB_NAME='ecommerce_db'
+DB_USER='your_mysql_username'
+DB_PASSWORD='your_mysql_password'
+DB_HOST='your_host'
+```
+
+5. Use the `schema.sql` file in the `db` folder to create your database using MySQL shell commands.
+6. Seed the database:
+
+```bash
+npm run seed
+```
+
+7. Start the server:
+
+```bash
+npm start
+```
+
+## Usage
+
+Once the server is running, you can use an API client like [Insomnia][insomnia] to test the API routes.
+
+- **GET routes** for categories, products, and tags display data in a formatted JSON.
+- **POST, PUT, and DELETE routes** allow for creating, updating, and deleting data in the database.
+For detailed examples of the request and response structures, please refer to the walkthrough videos included in this project.
+
+### Application Functionality
+Below are sample screenshots showcasing the application functionality.
 
 
+## Database Models
 
+- **Category**
+    - `id` (Integer, Primary Key, Auto Increment, Not Null)
+    - `category_name` (String, Not Null)
 
+- **Product**
+    - `id` (Integer, Primary Key, Auto Increment, Not Null)
+    - `product_name` (String, Not Null)
+    - `price` (Decimal, Not Null, Validates Decimal)
+    - `stock` (Integer, Not Null, Default Value 10, Validates Numeric)
+    - `category_id` (Integer, References Category model's id)
 
+- **Tag**
+    - `id` (Integer, Primary Key, Auto Increment, Not Null)
+    - `tag_name` (String)
 
+- **ProductTag**
+    - `id` (Integer, Primary Key, Auto Increment, Not Null)
+    - `product_id` (Integer, References Product model's id)
+    - `tag_id` (Integer, References Tag model's id)
 
+## Associations
 
+- Product belongs to Category
+- Category has many Product models
+- Product belongs to many Tag models through ProductTag
+- Tag belongs to many Product models
 
+## State Flow Diagram
 
+For a visual representation of the sequence of actions involved in the **employee tracker**, refer to the [State Flow Diagram][state-flow] provided in the project documentation.
 
+Feel free to reach out, contribute, or provide feedback to make the Password Generator Project even more robust and user-friendly!
 
+## Contributing
 
+Your contributions are welcome! Please feel free to submit issues and pull requests with improvements or suggestions.
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE][MIT] file for details.
+
+[employee-tracker]: <>
+[node-js]: <https://nodejs.org/>
+[my-sql]: <https://www.mysql.com/>
+[insomnia]: <https://insomnia.rest/>
+[state-flow]: <https://github.com/naturuplift/ECommerceBackEnd/blob/main/assets/eCommeerce%20Back%20End%20State%20Diagram%20v1.png>
+[MIT]: <https://github.com/naturuplift/ECommerceBackEnd/blob/main/LICENSE>
