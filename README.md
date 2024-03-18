@@ -33,6 +33,7 @@
 
 
 ## Description
+
 This project is an E-commerce back end that utilizes the latest technologies, providing an efficient and scalable solution for internet retail companies. Built with an Express.js API and connected to a MySQL database using Sequelize, this application facilitates product, category, and tag management through a RESTful API. This allows businesses to maintain their inventory in a database, offering endpoints for creating, reading, updating, and deleting (CRUD operations) data for categories, products, and tags.
 
 ## Table of Contents
@@ -50,6 +51,7 @@ This project is an E-commerce back end that utilizes the latest technologies, pr
 - [License](#license)
 
 ## Demo Video
+
 [Open Demo video of Employee Tracker][employee-tracker]
 
 ## Features
@@ -111,12 +113,78 @@ npm start
 Once the server is running, you can use an API client like [Insomnia][insomnia] to test the API routes.
 
 - **GET routes** for categories, products, and tags display data in a formatted JSON.
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/729ca888-d5f8-4e05-96d2-2bcd33039a1e)
+
 - **POST, PUT, and DELETE routes** allow for creating, updating, and deleting data in the database.
-For detailed examples of the request and response structures, please refer to the walkthrough videos included in this project.
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/048894e3-20ef-4c5c-9dfa-245639ecbb19)
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/6eca5b93-2ba4-4149-9796-1f28340633eb)
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/1f4ffb12-12fd-4dd0-bc44-2b3853eb88e4)
 
 ### Application Functionality
-Below are sample screenshots showcasing the application functionality.
 
+Below are sample screenshots showcasing the application routes functionality.
+
+**GET** All Categories:
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/2b637709-ecd0-446b-92f3-a2aabb6a63fb)
+
+**GET**  Category (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/15def146-f9d3-48c0-9165-625378d2886f)
+
+**GET** All Products:
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/96c28961-f947-46a2-9824-1d6bc145f56d)
+
+**GET** Product (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/6e55127d-e0ec-415c-b0d9-a491da536415)
+
+**GET** All Tags:
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/056ef4de-637f-494e-9f2d-fc7b78dc7423)
+
+**GET** Tag (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/9a70df32-ebdd-4710-9db8-d55e045be6e1)
+
+**POST** CREATE Category:
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/d1ac500f-f5a1-48b0-b51b-cdc502f2ecc6)
+
+**PUT** UPDATE Category (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/70586422-0cc7-460c-8057-168faafa860b)
+
+**DELETE** DELETE Category (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/87d4d370-9c2e-4d79-b290-3aa3d8f0b9ff)
+
+**POST** CREATE Product:
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/84b7c488-5ec7-4c35-96df-4fd62218041a)
+
+**PUT** UPDATE Product (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/679fd302-84b5-4e97-9202-3846ad878718)
+
+**DELETE** DELETE Product (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/5e2e35f8-891c-4ceb-a47f-fc6a256f804b)
+
+**POST** CREATE Tag:
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/c98b0412-3bef-402e-967f-49481525515f)
+
+**PUT** UPDATE Tag (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/3944210f-9400-4b15-b8cd-f94e15324c48)
+
+**DELETE** DELETE Tag (by Id):
+
+![image](https://github.com/naturuplift/ECommerceBackEnd/assets/23546356/9404dfbf-d2ff-43fd-96f4-8d55e8705b3c)
 
 ## Database Models
 
@@ -174,7 +242,7 @@ ECommerceBackEnd/
 │   ├── category-seeds.js
 │   ├── product-seeds.js
 │   ├── productTag-seeds.js
-│   └── tag-seeds.js
+│   ├── tag-seeds.js
 │   └── seed.js
 ├── .env
 ├── .gitignore
