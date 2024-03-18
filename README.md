@@ -35,6 +35,22 @@
 ## Description
 This project is an E-commerce back end that utilizes the latest technologies, providing an efficient and scalable solution for internet retail companies. Built with an Express.js API and connected to a MySQL database using Sequelize, this application facilitates product, category, and tag management through a RESTful API. This allows businesses to maintain their inventory in a database, offering endpoints for creating, reading, updating, and deleting (CRUD operations) data for categories, products, and tags.
 
+## Table of Contents
+
+- [Demo Video](#demo-video)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Database Models](#database-models)
+- [Associations](#associations)
+- [Starter Code](#starter-code)
+- [State Flow Diagram](#state-flow-diagram)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Demo Video
+[Open Demo video of Employee Tracker][employee-tracker]
+
 ## Features
 
 - **View All Categories, Products, and Tags**: Users can retrieve a comprehensive list of all categories, products, and tags stored in the database, each accessible through dedicated API GET routes. This feature ensures that the backend supports scalable read operations for e-commerce inventories.
@@ -50,20 +66,6 @@ This project is an E-commerce back end that utilizes the latest technologies, pr
 - **Environment Variable Configuration**: Incorporates the `dotenv` package to securely configure environment variables. This approach safeguards database credentials and other sensitive information, making the application more secure and easier to configure across different environments.
 
 - **Sequelize Sync on Server Start**: Automatically syncs Sequelize models to the MySQL database upon server startup. This feature ensures that the database schema is up-to-date and ready for operations as soon as the server begins running.
-
-## Table of Contents
-
-- [Demo Video](#demo-video)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Database Models](#database-models)
-- [Associations](#associations)
-- [State Flow Diagram](#state-flow-diagram)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Demo Video
-[Open Demo video of Employee Tracker][employee-tracker]
 
 ## Installation
 
@@ -144,6 +146,10 @@ Below are sample screenshots showcasing the application functionality.
 - Product belongs to many Tag models through ProductTag
 - Tag belongs to many Product models
 
+## Starter Code
+
+To start with this project we used the following [Starter Code][starter-code]
+
 ## State Flow Diagram
 
 For a visual representation of the sequence of actions involved in the **employee tracker**, refer to the [State Flow Diagram][state-flow] provided in the project documentation.
@@ -162,5 +168,6 @@ This project is licensed under the MIT License. See the [LICENSE][MIT] file for 
 [node-js]: <https://nodejs.org/>
 [my-sql]: <https://www.mysql.com/>
 [insomnia]: <https://insomnia.rest/>
+[starter-code]: <https://github.com/coding-boot-camp/fantastic-umbrella>
 [state-flow]: <https://github.com/naturuplift/ECommerceBackEnd/blob/main/assets/eCommeerce%20Back%20End%20State%20Diagram%20v1.png>
 [MIT]: <https://github.com/naturuplift/ECommerceBackEnd/blob/main/LICENSE>
